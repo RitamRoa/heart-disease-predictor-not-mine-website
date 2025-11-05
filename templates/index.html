@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Age">Age:</label>
+            <input type="number" id="Age" name="Age" required>
+
+            <label for="Height">Height (in cm):</label>
+            <input type="text" id="Height" name="Height" required>
+
+            <label for="Weight">Weight (in kg):</label>
+            <input type="text" id="Weight" name="Weight" required>
+
+            <label for="Sex">Sex:</label>
+            <select id="Sex" name="Sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="Cholesterol">High Cholesterol:</label>
+            <select id="Cholesterol" name="Cholesterol">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label for="Smoking">Smoking:</label>
+            <select id="Smoking" name="Smoking">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label for="AlcoholDrinking">Alcohol Drinking:</label>
+            <select id="AlcoholDrinking" name="AlcoholDrinking">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label for="Diabetic">Diabetic:</label>
+            <select id="Diabetic" name="Diabetic">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
